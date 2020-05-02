@@ -144,4 +144,6 @@ so the real identity is still anonym.
 
 [ROBust and privacy-presERving proximity Tracing protocol](https://github.com/ROBERT-proximity-tracing)
 
+[WeCare](https://github.com/We-Care-sweden)
+
 [Pan-European Privacy-Preserving Proximity Tracing](https://www.pepp-pt.org/)
