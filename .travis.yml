@@ -1,0 +1,16 @@
+services:
+  - docker
+
+script:
+  - docker run --volume "$TRAVIS_BUILD_DIR:/data" pandoc/latex:2.6 README.md SSI/README.md --data-dir=. --toc --pdf-engine=xelatex -s -o c-diary.pdf
+
+deploy:
+  provider: releases
+  github_token: $GH_TOKEN
+  file_glob: true
+  file:
+   - $TRAVIS_BUILD_DIR/c-diary.pdf
+  skip_cleanup: true
+  keep_history: true
+  on:
+    tags: true
