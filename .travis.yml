@@ -6,12 +6,10 @@ script:
 
 deploy:
   provider: releases
-  api_key: "$GH_TOKEN"
-  file_glob: true
+  api_key:
+    secure: $GH_TOKEN
   file:
    - $TRAVIS_BUILD_DIR/c-diary.pdf
   skip_cleanup: true
-  keep_history: true
-  edge: true
   on:
     tags: true
