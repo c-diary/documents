@@ -12,5 +12,6 @@ deploy:
    - $TRAVIS_BUILD_DIR/c-diary.pdf
   skip_cleanup: true
   keep_history: true
+  edge: true
   on:
     tags: true
